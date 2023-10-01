@@ -55,11 +55,15 @@ const page = () => {
 
   return (
     <>
-      <h1 className='bg-black text-white text-center p-5 m-0 text-5xl font-bold'>My Tode List</h1>
+      <h1 className='bg-black text-white text-center p-5 m-0 text-5xl font-bold'>
+        My Tode List
+      </h1>
+
+
       <form onSubmit={submitHandler}>
         
         <input type="text" 
-        className='border-double border-4 border-indigo-800 px-4 py-3 m-5 ' 
+        className='border-double border-4 border-indigo-800 px-11 w-1/3 py-3 m-5 ' 
         placeholder='Enter title here'
         value={title}
         onChange={(e)=>{
@@ -69,7 +73,7 @@ const page = () => {
 
 
         <input type="text" 
-        className='border-double border-4 border-indigo-900 px-9 py-3 m-5 ' 
+        className='border-double border-4 w-1/2 border-indigo-900 px-11 py-3 m-5 ' 
         placeholder='Enter description here'
         value={desc}
         onChange={(e)=>{
@@ -83,6 +87,7 @@ const page = () => {
 
       </form>      
       <hr/>
+
       <div className='p-8 bg-slate-200'>
         <ul>{renderTask}</ul>
       </div>
