@@ -1,10 +1,12 @@
 "use client"
 import React, { useState } from 'react'
 
+
 const page = () => {
   const [title,settitle] = useState("")
   const [desc,setdesc] = useState("")
   const [mainTask,setmainTask] = useState([])
+
 
   const submitHandler=(e)=>{
     e.preventDefault()
@@ -15,6 +17,7 @@ const page = () => {
     console.log(mainTask)
   }
 
+
   const deleteHandler=(i)=>{
     let copyTask = [...mainTask]
     copyTask.splice(i,1)
@@ -22,7 +25,9 @@ const page = () => {
   }
 
 
-  let renderTask=<h2>No Task Availble</h2>
+
+  let renderTask=<h2>No Task Available</h2>
+
 
   if(mainTask.length>0){
   renderTask=mainTask.map((t,i)=>{
@@ -32,17 +37,21 @@ const page = () => {
       <h5 className='text-2xl items-cnter font-semibold'>{t.title}</h5>
       <h5 className='text-xl items-cnter font-semibold'>{t.desc}</h5>
     </div>
+
       <button 
       onClick={()=>{
         deleteHandler(i)
       }}
-      className='bg-black text-white px-4 py-2 rounded font-bold'>
+      className='bg-white text-black px-4 py-2 rounded font-bold'>
         Delete
       </button>
+    
       </li>
+      
     );
   });
   }
+
 
   return (
     <>
