@@ -26,15 +26,16 @@ const page = () => {
 
 
 
-  let renderTask=<h2>No Task Available</h2>
+  let renderTask=<h2 className='tracking-wide text-xl font-bold'>No Task Available</h2>
 
 
   if(mainTask.length>0){
   renderTask=mainTask.map((t,i)=>{
     return (
-      <li key={i} className='flex items-cnter justify-between mb-5'>
+      <li key={i} className='flex items-cnter justify-between mb-5 '>
     <div className='flex justify-between mb-5 w-2/3'>
-      <h5 className='text-2xl items-cnter font-semibold'>{t.title}</h5>
+      <h5 className='text-2xl items-cnter font-semibold '>{t.title}</h5>
+
       <h5 className='text-xl items-cnter font-semibold'>{t.desc}</h5>
     </div>
 
@@ -42,7 +43,7 @@ const page = () => {
       onClick={()=>{
         deleteHandler(i)
       }}
-      className='bg-white text-black px-4 py-2 rounded font-bold'>
+      className='bg-green-500 px-4 text-red-800 py-2 rounded font-bold'>
         Delete
       </button>
     
@@ -54,8 +55,10 @@ const page = () => {
 
 
   return (
-    <>
-      <h1 className='bg-black text-white text-center p-5 m-0 text-5xl font-bold'>
+
+    
+    <div  > 
+      <h1 className='bg-amber-800 text-white text-center p-5 m-0 text-5xl font-bold'>
         My Tode List
       </h1>
 
@@ -63,7 +66,7 @@ const page = () => {
       <form onSubmit={submitHandler}>
         
         <input type="text" 
-        className='border-double border-4 border-indigo-800 px-11 w-1/3 py-3 m-5 ' 
+        className='border-double border-4 border-indigo-800 px-11 w-2/6 py-3 m-5 ' 
         placeholder='Enter title here'
         value={title}
         onChange={(e)=>{
@@ -73,7 +76,7 @@ const page = () => {
 
 
         <input type="text" 
-        className='border-double border-4 w-1/2 border-indigo-900 px-11 py-3 m-5 ' 
+        className='border-double border-4 w-3/6 border-indigo-800 px-11 py-3 m-5 ' 
         placeholder='Enter description here'
         value={desc}
         onChange={(e)=>{
@@ -81,18 +84,18 @@ const page = () => {
         }}
         />
         
-        <button className='bg-black text-white text-2xl font-bold rounded px-4 py-2 m-5'>
+        <button className='bg-green-900  text-white text-2xl font-bold rounded px-4 py-2 '>
           Add Task
         </button>
 
       </form>      
       <hr/>
 
-      <div className='p-8 bg-slate-200'>
-        <ul>{renderTask}</ul>
+      <div className='p-8 bg-yellow-400'>
+        <ul >{renderTask}</ul>
       </div>
         
-    </>
+    </div>
   )
 }
 
