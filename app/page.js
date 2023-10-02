@@ -69,6 +69,7 @@ const page = () => {
         className='border-double border-4 border-indigo-800 px-11 w-2/6 py-3 m-5 ' 
         placeholder='Enter title here'
         value={title}
+        required
         onChange={(e)=>{
             settitle(e.target.value)
         }}
@@ -79,6 +80,7 @@ const page = () => {
         className='border-double border-4 w-3/6 border-indigo-800 px-11 py-3 m-5 ' 
         placeholder='Enter description here'
         value={desc}
+        required
         onChange={(e)=>{
             setdesc(e.target.value)
         }}
