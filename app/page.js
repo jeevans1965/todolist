@@ -26,7 +26,9 @@ const page = () => {
 
 
 
-  let renderTask=<h2 className='tracking-wide text-xl font-bold'>No Task Available</h2>
+  let renderTask=<h2 className='tracking-wide text-xl font-bold'>
+    No Task Available
+    </h2>
 
 
   if(mainTask.length>0){
@@ -34,9 +36,10 @@ const page = () => {
     return (
       <li key={i} className='flex items-cnter justify-between mb-5 '>
     <div className='flex justify-between mb-5 w-2/3'>
-      <h5 className='text-2xl items-cnter font-semibold '>{t.title}</h5>
 
-      <h5 className='text-xl items-cnter font-semibold'>{t.desc}</h5>
+      <h5 className='text-2xl w-4/6 items-cnter font-semibold'>{t.title}</h5>
+
+      <h5 className='text-xl w-2/6 items-cnter font-semibold'>{t.desc}</h5>
     </div>
 
       <button 
