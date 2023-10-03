@@ -34,19 +34,19 @@ const page = () => {
   if(mainTask.length>0){
   renderTask=mainTask.map((t,i)=>{
     return (
-      <li key={i} className='flex items-cnter justify-between mb-5 '>
+      <li key={i} className='flex bg-amber-800 box-decoration-slice bg-gradient-to-r from-indigo-600 to-green-500 items-center justify-between mb-4 '>
     <div className='flex justify-between mb-5 w-2/3'>
 
-      <h5 className='text-2xl w-4/6 items-cnter font-semibold'>{t.title}</h5>
+      <h5 className='text-2xl flex-initial w-34  items-cnter font-semibold'>{t.title}</h5>
 
-      <h5 className='text-xl w-2/6 items-cnter font-semibold'>{t.desc}</h5>
+      <h5 className='text-xl flex-initial w-64  items-cnter font-semibold'>{t.desc}</h5>
     </div>
 
       <button 
       onClick={()=>{
         deleteHandler(i)
       }}
-      className='bg-red-400 hover:bg-red-700 active:bg-violet-700 focus:outline-none focus:ring focus:ring-violet-300 px-4  py-2 rounded font-bold'>
+      className='bg-red-400 drop-shadow-3xl flex-none hover:bg-red-700 active:bg-violet-700 focus:outline-none focus:ring focus:ring-violet-300 px-4  py-4 rounded font-bold'>
         Remove
       </button>
     
@@ -61,7 +61,7 @@ const page = () => {
 
     
     <div  > 
-      <h1 className='bg-amber-800 text-white text-center p-5 m-0 text-5xl font-bold'>
+      <h1 className='bg-amber-800 box-decoration-slice bg-gradient-to-r from-indigo-600 to-pink-500 text-white px-2 text-white text-center p-5 m-0 text-5xl font-bold'>
         My Tode List
       </h1>
 
@@ -69,7 +69,7 @@ const page = () => {
       <form onSubmit={submitHandler}>
         
         <input type="text" 
-        className='border-double border-4 border-indigo-800 px-11 w-2/6 py-3 m-5 ' 
+        className='border-solid border-2 border-indigo-600 px-11 w-2/6 py-3 m-5 ' 
         placeholder='Enter title here'
         value={title}
         required
@@ -80,7 +80,7 @@ const page = () => {
 
 
         <input type="text" 
-        className='border-double border-4 w-3/6 border-indigo-800 px-11 py-3 m-5 ' 
+        className='border-solid border-2 border-indigo-600 w-3/6  px-11 py-3 m-5 ' 
         placeholder='Enter description here'
         value={desc}
         required
@@ -89,7 +89,7 @@ const page = () => {
         }}
         />
         
-        <button className='bg-green-400 hover:bg-green-600 active:bg-violet-700 focus:outline-none focus:ring focus:ring-violet-300 text-2xl font-bold rounded px-4 py-2 '>
+        <button className='bg-yellow-400 outline-pink-500  drop-shadow-2xl hover:bg-yellow-600 active:bg-violet-700 focus:outline-none focus:ring focus:ring-violet-300 text-2xl font-bold rounded px-4 py-2 '>
           Add Task
         </button>
 
