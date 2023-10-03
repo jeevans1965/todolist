@@ -43,8 +43,8 @@ const page = () => {
       onClick={()=>{
         deleteHandler(i)
       }}
-      className='bg-green-500 px-4 text-red-800 py-2 rounded font-bold'>
-        Delete
+      className='bg-red-400 hover:bg-red-700 active:bg-violet-700 focus:outline-none focus:ring focus:ring-violet-300 px-4  py-2 rounded font-bold'>
+        Remove
       </button>
     
       </li>
@@ -86,7 +86,7 @@ const page = () => {
         }}
         />
         
-        <button className='bg-green-900  text-white text-2xl font-bold rounded px-4 py-2 '>
+        <button className='bg-green-400 hover:bg-green-600 active:bg-violet-700 focus:outline-none focus:ring focus:ring-violet-300 text-2xl font-bold rounded px-4 py-2 '>
           Add Task
         </button>
 
