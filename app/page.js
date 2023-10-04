@@ -61,7 +61,7 @@ const page = () => {
 
     
     <div  > 
-      <h1 className='bg-amber-800 box-decoration-slice bg-gradient-to-r from-indigo-600 to-pink-500 text-white px-2 text-white text-center p-5 m-0 text-5xl font-bold'>
+      <h1 className='bg-amber-800 box-decoration-slice bg-gradient-to-r from-indigo-600 to-pink-500 px-2 text-center p-5 m-0 text-5xl font-bold'>
         My Tode List
       </h1>
 
@@ -89,7 +89,7 @@ const page = () => {
         }}
         />
         
-        <button className='bg-yellow-400 outline-pink-500  drop-shadow-2xl hover:bg-yellow-600 active:bg-violet-700 focus:outline-none focus:ring focus:ring-violet-300 text-2xl font-bold rounded px-4 py-2 '>
+        <button className='bg-green-400 outline-pink-500  drop-shadow-2xl hover:bg-green-600 active:bg-violet-700 focus:outline-none focus:ring focus:ring-violet-300 text-2xl font-bold rounded px-4 py-2 '>
           Add Task
         </button>
 
