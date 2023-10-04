@@ -61,7 +61,7 @@ const page = () => {
 
     
     <div  > 
-      <h1 className='bg-amber-800 box-decoration-slice bg-gradient-to-r from-indigo-600 to-pink-500 px-2 text-center p-5 m-0 text-5xl font-bold'>
+      <h1 className='bg-amber-800 box-decoration-slice bg-gradient-to-r from-indigo-600 to-pink-500 px-2 text-center text-white p-5 m-0 text-5xl font-bold'>
         My Tode List
       </h1>
 
