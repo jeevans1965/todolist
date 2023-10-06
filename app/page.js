@@ -65,6 +65,7 @@ const page = () => {
         My Tode List
       </h1>
 
+      <marquee className="text-2xl">You can add your task's title and it's description, after completion of it you can remove it</marquee>
 
       <form onSubmit={submitHandler}>
         
